@@ -1,0 +1,135 @@
+
+<!-- saved from url=(0041)https://gamesx.com/controldata/saturn.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+   
+   <meta name="Author" content="Lawrence Wright">
+   <meta name="Description" content="Sega Saturn Controller Function Description">
+   <meta name="KeyWords" content="sega, saturn, controller, pad, stick, pin, out, pinout, data, select, line, connector, button, chip, signal, IC">
+   <title> Sega Saturn Controller Data </title>
+
+</head>
+<body text="#000000" bgcolor="white" link="#0000ff" vlink="#ff0000"><font face="arial">
+<a href="https://gamesx.com/index2.htm"><img src="./Sega Saturn Controller Data_files/back.jpg" border="0"></a>
+
+<br>
+<br>
+
+<center>
+<table border="0" width="600" cellpadding="5">
+ <tbody><tr>
+  <td bgcolor="444477" colspan="2">
+	<center>
+	<font size="+1" color="ffffff">
+	Sega Saturn Pad Info
+	</font>
+	</center>
+  </td>
+ </tr>
+ <tr>
+  <td bgcolor="444444" colspan="2">
+	<font size="-1" color="ffffff">
+	The Saturn control pad is a very simple beast.  Two 74153 chips are combined into a custom Sega chip.  Two Select lines are used to poll for four groups of four buttons.  If you want to make your own Saturn controller you need only shove two 74153 chips into it, and wire them according to <a href="https://gamesx.com/grafx/saturn.gif">this diagram</a>.  
+	<br><br>
+	<b>Note</b>: <b>If a nonstandard controller is attached the pinout below may not be accurate.</b>  This pinout is only accurate for Saturn pads, sticks and twin-sticks.  The Saturn port has many functions and uses.  MegaDrive controllers (including the 3- and 6-button pads, mouse and TeamTap) as well as Saturn pads, keyboards and guns can be used on each port.  While the SMPC (System Manager + Peripheral Control) chip automatically handles all the communication for these devices, it DOES tell the software what kind of device is attached, and these devices are not guaranteed to work in-game even though the hardware supports them.  The pinout for connecting a MegaDrive controller to a Saturn is not known, but Sega's documentation says they are supported with this port.  If you have one of these controllers please let me know!
+	<br><br>
+	Information for this page was taken from two sources: Sega's SMPC User's Manual, and <a href="http://lillith.sk.tsukuba.ac.jp/~kashima/">Kashi's page</a>.
+	</font>
+	
+  </td>
+ </tr>
+ <tr>
+  <td colspan="2" valign="middle">
+	<center>
+	<img src="./Sega Saturn Controller Data_files/satpadsys.gif">
+	<img src="./Sega Saturn Controller Data_files/satpadplug.gif">
+  </center></td>
+ </tr>
+ <tr>
+  <td valign="top" bgcolor="eeeeee">
+	<center>
+	<table border="0" cellspacing="2" bgcolor="0000ff">
+	 <tbody><tr>
+	  <td colspan="3" bgcolor="444444"><font color="ffffff"><center>Control Port</center></font></td></tr>
+	  <tr><th bgcolor="ffffff">pin #</th><th bgcolor="ffffff">Name</th><th bgcolor="ffffff">Function</th></tr>
+	 <tr><td bgcolor="ffffff">1</td><td bgcolor="ffffff">VCC</td><td bgcolor="ffffff">+5v (Out)</td></tr>
+	 <tr><td bgcolor="ffffff">2</td><td bgcolor="ffffff">D1</td><td bgcolor="ffffff">Data 1</td></tr>
+	 <tr><td bgcolor="ffffff">3</td><td bgcolor="ffffff">D0</td><td bgcolor="ffffff">Data 0</td></tr>
+	 <tr><td bgcolor="ffffff">4</td><td bgcolor="ffffff">S0</td><td bgcolor="ffffff">Select 0</td></tr>
+	 <tr><td bgcolor="ffffff">5</td><td bgcolor="ffffff">S1</td><td bgcolor="ffffff">Select 1</td></tr>
+	 <tr><td bgcolor="ffffff">6</td><td bgcolor="ffffff">5v</td><td bgcolor="ffffff">+5v (Inp)</td></tr>
+	 <tr><td bgcolor="ffffff">7</td><td bgcolor="ffffff">D3</td><td bgcolor="ffffff">Data 3</td></tr>
+	 <tr><td bgcolor="ffffff">8</td><td bgcolor="ffffff">D2</td><td bgcolor="ffffff">Data 2</td></tr>
+	 <tr><td bgcolor="ffffff">9</td><td bgcolor="ffffff">GND</td><td bgcolor="ffffff">Ground</td></tr>
+	</tbody></table>
+  </center></td>
+  <td valign="top" bgcolor="eeeeee">
+	<center>
+	<table border="0" cellspacing="2" bgcolor="ff0000">
+	 <tbody><tr><td colspan="7" bgcolor="444444"><font color="ffffff"><center>Bit Assignments</center></font></td></tr>
+	 <tr><th bgcolor="ffffff">S0</th><th bgcolor="ffffff">S1</th><td rowspan="5" bgcolor="ff0000"></td><th bgcolor="ffffff">D0</th><th bgcolor="ffffff">d1</th><th bgcolor="ffffff">d2</th><th bgcolor="ffffff">d3</th></tr>
+	 <tr>
+	  <td bgcolor="000000"><font color="ffff00">Off</font></td>
+	  <td bgcolor="000000"><font color="ffff00">Off</font></td>
+	  <td bgcolor="ffffff">Z</td>
+	  <td bgcolor="ffffff">Y</td>
+	  <td bgcolor="ffffff">X</td>
+	  <td bgcolor="ffffff">R</td>
+	 </tr>
+	 <tr>
+	  <td bgcolor="ffff00"><font color="0000ff">On</font></td>
+	  <td bgcolor="000000"><font color="ffff00">Off</font></td>
+	  <td bgcolor="ffffff">B</td>
+	  <td bgcolor="ffffff">C</td>
+	  <td bgcolor="ffffff">A</td>
+	  <td bgcolor="ffffff">St</td>
+	 </tr>
+	  <tr>
+	  <td bgcolor="000000"><font color="ffff00">Off</font></td>
+	  <td bgcolor="ffff00"><font color="0000ff">On</font></td>
+	  <td bgcolor="ffffff">Up</td>
+	  <td bgcolor="ffffff">Dn</td>
+	  <td bgcolor="ffffff">Lt</td>
+	  <td bgcolor="ffffff">Rt</td>
+	 </tr>
+	  <tr>
+	  <td bgcolor="ffff00"><font color="0000ff">On</font></td>
+	  <td bgcolor="ffff00"><font color="0000ff">On</font></td>
+	  <td bgcolor="ffffff">-</td>
+	  <td bgcolor="ffffff">-</td>
+	  <td bgcolor="ffffff">-</td>
+	  <td bgcolor="ffffff">L</td>
+	 </tr>
+	</tbody></table>
+	<br><br>
+  </center></td>
+ </tr>
+</tbody></table>
+
+<br>
+
+<table width="640">
+ <tbody><tr>
+  <td>
+<br>
+<hr><font color="#000000"><font size="-1">All contents (c)2003 GameSX.com unless otherwise noted. All trademarks copyright of their respective companies. GameSX.com assumes absolutely no responsiblility whatsoever for any sort of damages incurred while either viewing this information or doing anything with said information. If you don't like it, change the channel. Some of this information may have come from other sources, and GameSX.com in no way implies ownership of this information, and merely intends to provide a convenient source for finding this information. That said, we wrote this, and would appreciate your not lifting it for your own page without due credit.  <a href="mailto:disclaimer@gamesx.com">Mail us!</a><br>
+</font></font>
+  </td>
+ </tr>
+</tbody></table>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://nfgworld.com/system/stats/" : "http://nfgworld.com/system/stats/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./Sega Saturn Controller Data_files/piwik.js.&#19979;&#36733;" type="text/javascript"></script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 6);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://nfgworld.com/system/stats/piwik.php?idsite=6" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tag -->
+
+
+
+</center></font></body></html>
